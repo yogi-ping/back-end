@@ -4,7 +4,7 @@ const {
   deleteUser,
   // 추가 기능이 있을 경우 여기에 추가
 } = require('../controllers/userController');
-const authMiddleware = require('../middleware/authMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 const { param } = require('express-validator');
 const router = express.Router();
 

@@ -6,7 +6,7 @@ const {
   deleteAccount,
   logout,
 } = require('../controllers/authController');
-const authMiddleware = require('../middleware/authMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 // 로그인
 router.post('/login', login);
