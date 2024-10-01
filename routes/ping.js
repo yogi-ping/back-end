@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const pinController = require('../controllers/pinController');
+const pinController = require('../controllers/pingController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 // 핀 저장, 삭제

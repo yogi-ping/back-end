@@ -4,7 +4,7 @@ const userRoutes = require('./routes/users');
 const placeRoutes = require('./routes/place');
 const groupRoutes = require('./routes/group');
 const reactionRoutes = require('./routes/reaction');
-const pinRoutes = require('./routes/pin');
+const pinRoutes = require('./routes/ping');
 
 const app = express();
 require('dotenv').config();
