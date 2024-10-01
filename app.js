@@ -1,12 +1,16 @@
 // app.js
 const express = require('express');
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/users');
+const placeRoutes = require('./routes/place');
+
 const app = express();
-const PORT = 3000;
+require('dotenv').config();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use(express.json());
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+app.use('/api', placeRoutes);
+app.use('/auth', authRoutes);
+app.use('/users', userRoutes);
+
+module.exports = app;
