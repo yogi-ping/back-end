@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const {
-  login,
-  register,
-  deleteAccount,
-  logout,
+    login,
+    join,
+    deleteAccount,
+    logout,
 } = require('../controllers/authController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
@@ -12,7 +12,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 router.post('/login', login);
 
 // 회원가입
-router.post('/register', register);
+router.post('/join', join);
 
 // 로그아웃
 router.post('/logout', authMiddleware, logout);
